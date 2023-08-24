@@ -4,7 +4,6 @@ export const USER_ABOUT_DEFAULT = 'Пока ничего не рассказал
 export const USER_AVATAR_DEFAULT = 'https://i.pravatar.cc/300';
 export const OFFER_HIDDEN_DEFAULT = false;
 export const PASSWORD_HASH_NUMBER = 10;
-export const SECRET_KEY_TOKEN = 'jwt_secret';
 export const SORTING_TYPE: {
   ASC: FindOptionsOrderValue;
   DESC: FindOptionsOrderValue;

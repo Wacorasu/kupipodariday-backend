@@ -9,15 +9,15 @@ import { LocalStrategy } from '../strategies/local.strategy';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from '../users/entity/user.entity';
 import { AuthController } from './authorization.controller';
-import { SECRET_KEY_TOKEN } from 'src/utils/constants';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     UsersModule,
     PassportModule,
     TypeOrmModule.forFeature([User]),
     JwtModule.register({
-      secret: SECRET_KEY_TOKEN,
+      secret: process.env.JWT_SECRET,
     }),
     ConfigModule,
   ],
